@@ -176,11 +176,11 @@ server {
 - ["Web architecture 101" Medium](https://medium.com/storyblocks-engineering/web-architecture-101-a3224e126947)
 - ["Reverse proxy"](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/)
 - ["Проксирование, балансировка нагрузки"](https://www.8host.com/blog/osnovy-raboty-s-nginx-proksirovanie-balansirovka-nagruzki-buferizaciya-i-keshirovanie/)
-- ["Selecting gunicorn worker types for different python web applications"](https://medium.com/@nhudinhtuan/gunicorn-worker-types-practice-advice-for-better-performance-7a299bb8f929)
 - ["WSGI interface"](https://www.fullstackpython.com/wsgi-servers.html)
-- ["pep3333"](https://www.python.org/dev/peps/pep-3333/)
 - ["What is WSGI and Why Do You Need Gunicorn and Nginx in Django"](https://apirobot.me/posts/what-is-wsgi-and-why-do-you-need-gunicorn-and-nginx-in-django)
 - ["Selecting gunicorn worker types"](https://medium.com/@nhudinhtuan/gunicorn-worker-types-practice-advice-for-better-performance-7a299bb8f929)
+
+- ["pep3333"](https://www.python.org/dev/peps/pep-3333/)
 - Nginx documentation
   - ["Модуль ngx_http_upstream_module"](https://nginx.org/ru/docs/http/ngx_http_upstream_module.html#least_conn)
   - ["Проксирование WebSocket"](https://nginx.org/ru/docs/http/websocket.html)

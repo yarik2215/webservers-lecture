@@ -3,25 +3,39 @@ version: '3'
 services:
   reverse-proxy:
     # The official v2 Traefik docker image
-    image: traefik:v2.5
+    image: traefik
     # Enables the web UI and tells Traefik to listen to docker
     # command: --api.insecure=true --providers.docker
     ports:
       # The HTTP port
       - "80:80"
+      # - "443:443"
       # The Web UI (enabled by --api.insecure=true)
-      - "8080:8080"
+      # - "8080:8080"
     volumes:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock
       # Traefik config file
-      - ./traefik.dev.toml:/etc/traefik/traefik.toml
-
+      - ./traefik.dev.yaml:/etc/traefik/traefik.yaml
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dashboard.entrypoints=http"
+      - "traefik.http.routers.dashboard.rule=PathPrefix(`/api`) || PathPrefix(`/dashboard`)"
+      - "traefik.http.routers.dashboard.service=api@internal"
+      - "traefik.http.routers.dashboard.middlewares=auth"
+      - "traefik.http.middlewares.auth.basicauth.users=admin:$$2y$$05$$TTk8Npwip7GDxXnzWhQj4OMwxvyCdOPtN0U3k3nPIal39KJpYvT9O"
+            
   web:
     build: ./app
     expose:
       - 8000
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.fastapi.rule=PathPrefix(`/test/`)"
-      # - "traefik.http.routers.fastapi.rule=Host(`fastapi.localhost`)"
+      - "traefik.http.routers.fastapi.entrypoints=http"
+      - "traefik.http.routers.fastapi.rule=PathPrefix(`/test`)"
+    env_file:
+      - .env
+    environment:
+      - PASS=${USERR}/${PASSWORD}
+    volume:
+      - /src/app:/app

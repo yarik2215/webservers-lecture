@@ -1,0 +1,4 @@
+127.0.0.1 - - [19/Nov/2021:15:30:23 +0000] "GET / HTTP/1.1" 200 206 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0"
+127.0.0.1 - - [19/Nov/2021:15:30:23 +0000] "GET /styles/test.css HTTP/1.1" 200 25 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0"
+127.0.0.1 - - [19/Nov/2021:15:30:23 +0000] "GET /test.webp HTTP/1.1" 200 33122 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0"
+127.0.0.1 - - [19/Nov/2021:15:30:23 +0000] "GET /favicon.ico HTTP/1.1" 404 162 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0"

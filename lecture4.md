@@ -74,8 +74,15 @@ gunicorn example:app -w 4 -k uvicorn.workers.UvicornWorker
 
 ## Traefik
 
+`Traefik` — это обратный прокси-сервер с открытым исходным кодом, обеспечивающий простую работу с микросервисами и/или просто контейнерами с вашими приложениями.
+
+Одним из основных достоинств Traefik является возможность изменения его конфигурации без приостановки работы (“на лету”) при применении любого из поддерживаемых бэкэндов, называемых провайдерами.
+
 ## Полезные ссылки
 
-["ASGI" Хабр](https://habr.com/ru/post/482936/)
-["ASGI specification"](https://asgi.readthedocs.io/en/latest/index.html)
-["Awesome ASGI"](https://github.com/florimondmanca/awesome-asgi)
+- ["ASGI" Хабр](https://habr.com/ru/post/482936/)
+- ["ASGI specification"](https://asgi.readthedocs.io/en/latest/index.html)
+- ["Awesome ASGI"](https://github.com/florimondmanca/awesome-asgi)
+- ["uvicorn doc"](https://www.uvicorn.org/)
+
+- ["Traefik" Хабр](https://habr.com/ru/post/508636/)
